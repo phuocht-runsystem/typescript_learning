@@ -11,7 +11,7 @@ function sum(a: number, b = 25): string {
   return a.toString() + b.toString();
 }
 
-function sumNumber(a: number, b = 25) {
+function sumNumber(a: number, b: number = 25) {
   return a + b;
 }
 
@@ -22,3 +22,9 @@ console.log(sum(10));
 console.log(sum(10, 30));
 console.log(sumNumber(10));
 console.log(sumNumber(10, 30));
+
+//optional number in first place !!!
+const wrongsumNumber = (a: number = 1, b: number) => a + b;
+
+console.log(wrongsumNumber(10, 5)); //correct
+// console.log(wrongsumNumber(10)); //wrong
